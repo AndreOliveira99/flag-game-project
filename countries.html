@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="countries.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Countries flag game!</title>
+</head>
+
+<body>
+    <header>
+        <h1>FLAG GAME</h1>
+        <h2>Guess the correct country!</h2>
+        <div class="nav-bar-wrapper">
+            <div class="new-game" newGame>New Game</div>
+            <div class="top-scores" topScores>Top Scores</div>
+        </div>
+    </header>
+    <main>
+        <div class="flag-wrapper">
+            <img src="" alt="" flag>
+        </div>
+        <div class="options-wrapper">
+            <div class="options">
+                <label>
+                    <input country-option type="radio" name="country" value="Brasil" id="radio1">
+                    <span></span>
+                </label>
+                <label>
+                    <input country-option type="radio" name="country" value="Venezuela" id="radio2">
+                    <span></span>
+                </label>
+                <label>
+                    <input country-option type="radio" name="country" value="Polônia" id="radio3">
+                    <span></span>
+                </label>
+            </div>
+            <button id="answer-button">Answer</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+<div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="close-btn" onclick="removePopup()">&times;
+        </div>
+        <h1>ROUND OVER</h1>
+        <p>
+            You finished the round!
+        </p>
+        <div class="nav-link-wrapper">
+            <a class="new-game" newGame>New Game</a>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup-2">
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="pop-up-header">
+            <h1>Report</h1>
+        </div>
+        <div class="report" report></div>
+
+        <a class="submit-score" submitScore>Submit Score</a>
+
+        <div class="report-footer">
+            <div class="score" score>Score: 0</div>
+            <div class="nav-link-wrapper">
+                <a class="new-game" newGame>New Game</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="countriesAxios.js"></script>
+
+</html>
